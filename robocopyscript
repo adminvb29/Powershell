@@ -1,0 +1,7 @@
+robocopy \\usterm14\shared C:\Migration\shared /E /Z /ZB /R:5 /W:5 /TBD /NP /V /MT:16
+robocopy \\usterm14\redirectedfolders C:\Migration\redirectedfolders /E /Z /ZB /R:5 /W:5 /TBD /NP /V /MT:16
+Done - robocopy "\\usterm14\MIP Share" "F:\Migration\MIP Share" /E /Z /ZB /R:5 /W:5 /TBD /NP /V /MT:16
+Done - robocopy "\\usterm14\Quickbooks" "F:\Migration\Quickbooks" /E /Z /ZB /R:5 /W:5 /TBD /NP /V /MT:16
+robocopy "\\usterm14\Home" "C:\Migration\Home" /E /Z /ZB /R:5 /W:5 /TBD /NP /V /MT:16
+Done - robocopy "\\usterm14\zShare" "F:\Migration\zShare" /E /Z /ZB /R:5 /W:5 /TBD /NP /V /MT:16 /ETA
+Done - robocopy "\\usterm14\1Support" "F:\Migration\1Support" /E /Z /ZB /R:5 /W:5 /TBD /NP /V /MT:16 /ETA

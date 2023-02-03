@@ -1,0 +1,19 @@
+For /f %i IN ('dsquery server -o rdn') do @echo %i && @wmic /node:"%i" /namespace:\\root\microsoftdfs path dfsrreplicatedfolderinfo WHERE replicatedfoldername='SYSVOL share' get replicationgroupname,replicatedfoldername,state
+MCCC-DC
+ReplicatedFolderName  ReplicationGroupName  State
+SYSVOL Share          Domain System Volume  2
+
+cc-dc01
+ReplicatedFolderName  ReplicationGroupName  State
+SYSVOL Share          Domain System Volume  2
+
+
+C:\Windows\system32>For /f %i IN ('dsquery server -o rdn') do @echo %i && @(net view \\%i | find "SYSVOL") & echo
+MCCC-DC
+SYSVOL                                     Disk            Logon server share
+ECHO is on.
+cc-dc01
+SYSVOL      Disk           Logon server share
+ECHO is on.
+
+C:\Windows\system32>
